@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-import 'api_constants.dart';
+import '../app/api_constants.dart';
 
 class ApiClient {
   final Dio _dio = Dio();

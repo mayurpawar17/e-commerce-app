@@ -20,7 +20,6 @@ class Product extends Equatable {
   });
 
   @override
-  // TODO: implement props
   List<Object?> get props => [
     id,
     title,
@@ -39,7 +38,7 @@ class Rating {
   Rating({this.rate, this.count});
 
   Rating.fromJson(Map<String, dynamic> json) {
-    rate = json['rate'];
+    rate = (json['rate'] as num?)?.toDouble();
     count = json['count'];
   }
 

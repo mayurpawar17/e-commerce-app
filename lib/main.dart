@@ -5,7 +5,7 @@ import 'package:e_commerce_app/features/products/presentation/bloc/product_bloc.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'core/utils/api_router.dart';
+import 'core/app/app_router.dart';
 import 'features/products/data/dataSource/product_remote_data_source.dart';
 
 void main() {
