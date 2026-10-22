@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/usecase/use_case.dart';
-import '../../domain/entity/product.dart';
+import '../../domain/entity/product_entity.dart';
 import '../../domain/usecase/get_all_products_use_case.dart';
 
 part 'product_event.dart';

@@ -2,7 +2,7 @@ part of 'product_bloc.dart';
 
 @immutable
 sealed class ProductState {
-  final List<Product> products;
+  final List<ProductEntity> products;
   ProductState({required this.products});
 }
 

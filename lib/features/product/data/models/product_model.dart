@@ -1,6 +1,6 @@
-import '../../domain/entity/product.dart';
+import '../../domain/entity/product_entity.dart';
 
-class ProductModel extends Product {
+class ProductModel extends ProductEntity {
   ProductModel({
     required super.id,
     required super.title,
@@ -11,7 +11,7 @@ class ProductModel extends Product {
     required super.rating,
   });
 
-  factory ProductModel.fromEntity(Product product) {
+  factory ProductModel.fromEntity(ProductEntity product) {
     return ProductModel(
       id: product.id,
       title: product.title,

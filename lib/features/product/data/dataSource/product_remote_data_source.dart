@@ -1,22 +1,22 @@
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce_app/core/network/api_client.dart';
-import 'package:e_commerce_app/features/products/data/models/product_model.dart';
+import 'package:e_commerce_app/features/product/data/models/product_model.dart';
 
 import '../../../../core/app/api_constants.dart';
-import '../../domain/entity/product.dart';
+import '../../domain/entity/product_entity.dart';
 import 'package:e_commerce_app/core/utils/app_logger.dart';
 
 abstract class ProductRemoteDataSource {
-  Future<Either<Exception, List<Product>>> getAllProducts();
+  Future<Either<Exception, List<ProductEntity>>> getAllProducts();
 }
 
 class ProductRemoteDataSourceImpl extends ProductRemoteDataSource {
   final ApiClient _apiClient;
 
-  ProductRemoteDataSourceImpl(this._apiClient);
+  ProductRemoteDataSourceImpl({required this._apiClient});
 
   @override
-  Future<Either<Exception, List<Product>>> getAllProducts() async {
+  Future<Either<Exception, List<ProductEntity>>> getAllProducts() async {
     const String tag = 'getAllProducts';
     try {
       final response = await _apiClient.dio.get(ApiConstants.getAllProducts);
@@ -49,7 +49,7 @@ class ProductRemoteDataSourceImpl extends ProductRemoteDataSource {
     } catch (e) {
       AppLogger.error('Failed to load posts ${e.toString()}', tag: tag);
 
-      return Left(Exception('Failed to load products: $e'));
+      return Left(Exception('Failed to load product: $e'));
     }
   }
 }

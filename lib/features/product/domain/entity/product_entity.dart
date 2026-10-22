@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class Product extends Equatable {
+class ProductEntity extends Equatable {
   int? id;
   String? title;
   double? price;
@@ -9,7 +9,7 @@ class Product extends Equatable {
   String? image;
   Rating? rating;
 
-  Product({
+  ProductEntity({
     this.id,
     this.title,
     this.price,
