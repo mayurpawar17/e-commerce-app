@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   initState() {
     super.initState();
-    context.read<ProductBloc>().add(FetchProducts());
+    context.read<ProductBloc>().add(FetchProductsEvent());
   }
 
   @override
@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
           return Center(
             child: FilledButton.icon(
               onPressed: () {
-                context.read<ProductBloc>().add(FetchProducts());
+                context.read<ProductBloc>().add(FetchProductsEvent());
               },
               icon: const Icon(Icons.refresh_rounded),
               label: const Text('Load Posts'),
